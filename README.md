@@ -50,8 +50,8 @@ include:
 
 3- To save report result in text file you can run the command as follow:
 
-``
+`vegeta attack -targets=targets.txt -rate=10 -duration=5s | vegeta report > anas.bin`
 
 4- To generate different report you can run the command as follow:
 
-`vegeta attack -targets=targets.txt -rate=10 -duration=5s | vegeta report > anas.txt`
+`vegeta attack -targets=targets.txt -rate=10 -duration=5s | vegeta report -reporter=json`
