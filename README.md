@@ -83,3 +83,9 @@ vegeta attack -targets=targets.txt -rate=20 -duration=15m | vegeta dump | \
            latency.p85+latency.p50+latency.p30 \
            bytes_in.sum+bytes_out.sum
 ```
+
+OR => can be on oneline
+
+```bash
+vegeta attack -targets=targets.txt -rate=20 -duration=15m | vegeta dump | jaggr @count=rps hist\[200,300,301,400,404,500,502,503\]:code p30,p50,p85:latency sum:bytes_in sum:bytes_out | jplot rps+code.hist.200+code.hist.400+code.hist.404+code.hist.500+code.hist.502+code.hist.503 latency.p85+latency.p50+latency.p30 bytes_in.sum+bytes_out.sum
+```
