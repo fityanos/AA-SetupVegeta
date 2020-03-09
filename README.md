@@ -7,9 +7,6 @@ brew update && brew install vegeta
 ```bash
 brew install go --cross-compile-common
 ```
-```text
-Visit [GitHub](https://github.com/tsenart/vegeta)
-```
 ```bash
 subl .zshrc
 ```
